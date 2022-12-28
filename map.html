@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Interactive Map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+  <style>
+    #map {
+        height: 100%; /* Set the height of the map to 100% */
+        width: 100%; /* Set the width of the map to 100% */
+        position: absolute; /* Set the position of the map to absolute */
+        top: 0; /* Set the top property to 0 */
+        left: 0; /* Set the left property to 0 */
+        right: 0; /* Set the right property to 0 */
+        bottom: 0; /* Set the bottom property to 0 */
+    }
+
+    .popup {
+        background-color: white;
+        width: 300px; /* Set the width of the popup */
+    }
+
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+  <script>
+    // Create the map
+    var map = L.map('map').setView([40.3152, -74.6109], 12);
+
+    // Add the tile layer to the map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    var empireState = L.marker([40.748441, -73.985664]).addTo(map);
+    var hq = L.marker([40.287171, -74.641395]).addTo(map);
+
+    // Add the popup card for the Empire State Building
+    var empireStateString = '<div class="popup">' +
+                   '<h1 class="popup-header">Landmark Name</h1>' +
+                   '<p class="popup-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor, libero at interdum aliquet, lacus nibh vehicula lectus, id tincidunt lacus leo sit amet dui.</p>' +
+                   '<a href="https://www.example.com" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+    var hqString = '<div class="popup">' +
+                   '<h1 class="popup-header">STEP HQ</h1>' +
+                   '<p class="popup-text">STEP HQ</p>' +
+                   '<a href="https://www.example.com" class="popup-link">Learn more</a>' +
+                   '</div>';
+        
+    var empireStatePopUp = L.popup({minWidth: 300}).setContent(empireStateString);
+    var hqPopUp = L.popup({minWidth: 300}).setContent(hqString);
+
+    empireState.bindPopup(empireStatePopUp);
+    hq.bindPopup(hqPopUp);
+  </script>
+</body>
+</html>
