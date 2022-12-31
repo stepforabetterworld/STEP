@@ -26,13 +26,20 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
   <script>
     // Create the map
-    var map = L.map('map').setView([40.3152, -74.6109], 12);
+
+    var randomLat = Math.random() * 180 - 90; // Generate a random latitude value between -90 and 90
+    var randomLng = Math.random() * 360 - 180; // Generate a random longitude value between -180 and 180
+    var map = L.map('map').setView([randomLat, randomLng], 9);
+
+
+    // var map = L.map('map').setView([40.3152, -74.6109], 12);
 
     // Add the tile layer to the map
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
-      maxZoom: 18
-    }).addTo(map);
+L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+  attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9">ArcGIS</a>',
+  maxZoom: 18 /* Maximum zoom level at which the map can be displayed */
+}).addTo(map);
+
 
     var empireState = L.marker([40.748441, -73.985664]).addTo(map);
     var hq = L.marker([40.287171, -74.641395]).addTo(map);
@@ -55,6 +62,21 @@
 
     empireState.bindPopup(empireStatePopUp);
     hq.bindPopup(hqPopUp);
+
+    var canvas = document.querySelector("canvas");
+
+// Get the image data from the canvas
+    var imageData = canvas.toDataURL("image/png");
+
+// Create a new image element
+    var image = new Image();
+
+// Set the src of the image to the image data from the canvas
+    image.src = imageData;
+
+// Add the image to the page
+    document.body.appendChild(image);
+
   </script>
 </body>
 </html>
