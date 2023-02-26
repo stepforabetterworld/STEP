@@ -27,17 +27,12 @@
   <script>
     // Create the map
 
-    var randomLat = Math.random() * 180 - 90; // Generate a random latitude value between -90 and 90
-    var randomLng = Math.random() * 360 - 180; // Generate a random longitude value between -180 and 180
-    var map = L.map('map').setView([randomLat, randomLng], 9);
-
-
-    // var map = L.map('map').setView([40.3152, -74.6109], 12);
+    var map = L.map('map').setView([40.3152, -74.6109], 12);
 
     // Add the tile layer to the map
-L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-  attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.arcgis.com/home/item.html?id=10df2279f9684e4a9f6a7f08febac2a9">ArcGIS</a>',
-  maxZoom: 18 /* Maximum zoom level at which the map can be displayed */
+    var streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 20,
+    id: 'satellite'
 }).addTo(map);
 
 
@@ -47,14 +42,13 @@ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/
     // Add the popup card for the Empire State Building
     var empireStateString = '<div class="popup">' +
                    '<h1 class="popup-header">Landmark Name</h1>' +
-                   '<p class="popup-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor, libero at interdum aliquet, lacus nibh vehicula lectus, id tincidunt lacus leo sit amet dui.</p>' +
                    '<a href="https://www.example.com" class="popup-link">Learn more</a>' +
                    '</div>';
 
     var hqString = '<div class="popup">' +
-                   '<h1 class="popup-header">STEP HQ</h1>' +
-                   '<p class="popup-text">STEP HQ</p>' +
-                   '<a href="https://www.example.com" class="popup-link">Learn more</a>' +
+                   '<center><h1 class="popup-header">STEP HQ</h1></center>' +
+                   '<center><p class="popup-text">STEP HQ</p></center>' +
+                   '<a href="https://www.stepforabetterworld.org" class="popup-link">Learn more</a>' +
                    '</div>';
         
     var empireStatePopUp = L.popup({minWidth: 300}).setContent(empireStateString);
