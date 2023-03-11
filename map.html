@@ -35,27 +35,457 @@
     id: 'satellite'
 }).addTo(map);
 
-
-    var empireState = L.marker([40.748441, -73.985664]).addTo(map);
-    var hq = L.marker([40.287171, -74.641395]).addTo(map);
-
-    // Add the popup card for the Empire State Building
-    var empireStateString = '<div class="popup">' +
-                   '<h1 class="popup-header">Landmark Name</h1>' +
-                   '<a href="https://www.example.com" class="popup-link">Learn more</a>' +
-                   '</div>';
-
-    var hqString = '<div class="popup">' +
-                   '<center><h1 class="popup-header">STEP HQ</h1></center>' +
-                   '<center><p class="popup-text">STEP HQ</p></center>' +
-                   '<a href="https://www.stepforabetterworld.org" class="popup-link">Learn more</a>' +
+    var anchorhouse = L.marker([40.2059, -74.7581]).addTo(map);
+    var crownofindia = L.marker([40.3278, -74.5753]).addTo(map);
+    var kathmandu = L.marker([27.7138, 85.3244]).addTo(map);
+    var plainsbororescuesquad = L.marker([40.3328, -74.5874]).addTo(map);
+    var highschoolsouth = L.marker([40.3079, -74.6206]).addTo(map);
+    var plainsbororecreationcenter = L.marker([40.3337, -74.5875]).addTo(map);      
+    var cherrytreeclub = L.marker([40.3187, -74.6025]).addTo(map);
+    var highschoolnorth = L.marker([40.3234, -74.6003]).addTo(map);
+    var elijahspromisesoupkitchen = L.marker([40.4869, -74.4514]).addTo(map);      
+    var trentonareasoupkitchen = L.marker([40.2281, -74.7533]).addTo(map);
+    var redberryfrozenyogurt = L.marker([40.3376, -74.5938]).addTo(map);
+    var texasroadhouse = L.marker([40.2663, -74.6609]).addTo(map);
+    var plainsborohealthandfitnesscenter = L.marker([40.3398, -74.6219]).addTo(map);
+    var ronaldmcdonaldhouse = L.marker([40.5251, -74.4541]).addTo(map);
+    var buffalowildwings = L.marker([40.3321, -74.6711]).addTo(map);
+    var rescuemissionoftrenton = L.marker([40.2237, -74.757]).addTo(map);
+    var plainsboropreserve = L.marker([40.3494, -74.5571]).addTo(map);
+    var salvationarmy = L.marker([40.2554, -74.6869]).addTo(map);
+    var arminarmgarden = L.marker([40.2422, -74.7583]).addTo(map);
+    var artisseniorliving = L.marker([40.3484, -74.6292]).addTo(map);
+    var mercercountypark = L.marker([40.2621, -74.6352]).addTo(map);
+    var njeyeglassrecyclingcenter = L.marker([40.5064, -74.8648]).addTo(map);
+    var parlin,nj = L.marker([40.4624, -74.3275]).addTo(map);
+    var washington,dc = L.marker([38.9073, -77.0213]).addTo(map);
+    var eastwindsorchipotle = L.marker([40.2792, -74.5313]).addTo(map);
+    var stpetersuniversityhospital = L.marker([40.5017, -74.4599]).addTo(map);
+    var westwindsorpolice = L.marker([40.3052, -74.6353]).addTo(map);
+    var thurgoodmarshallcollegefund = L.marker([38.8978, -77.0243]).addTo(map);
+    var robbinselementaryschool = L.marker([40.2166, -74.7499]).addTo(map);
+    var lawrencecommunitycenter = L.marker([40.2743, -74.7508]).addTo(map);
+    var easternserviceworkersassociation = L.marker([40.248, -74.7737]).addTo(map);
+    var loavesandfishes = L.marker([40.4533, -74.1684]).addTo(map);
+    var indianredcrosssocietykarnatakastatebranch = L.marker([12.9843, 77.5791]).addTo(map);
+    var georgeewilsonelementaryschool = L.marker([40.2001, -74.7206]).addTo(map);
+    var greenwoodelementaryschool = L.marker([40.23, -74.7235]).addTo(map);
+    var howardshealthychoices = L.marker([40.2233, -74.738]).addTo(map);
+    var liquidchurchofmercercounty = L.marker([40.3017, -74.6514]).addTo(map);
+    var unhqinnyc = L.marker([40.7493, -73.9674]).addTo(map);
+    var soles4souls = L.marker([37.6414, -77.4104]).addTo(map);
+    var thewatershedinstituteincranbury = L.marker([40.3525, -74.7733]).addTo(map);
+    var libertystatepark = L.marker([40.7042, -74.0509]).addTo(map);
+    var thegambia = L.marker([13.4364, -15.3642]).addTo(map);
+    var atlanticcity = L.marker([39.3651, -74.4249]).addTo(map);
+    var westwindsorcommunitypark = L.marker([40.3055, -74.6082]).addTo(map);
+    var marinecorpsbaseinwesttrenton = L.marker([40.2752, -74.8036]).addTo(map);
+        
+                   var anchorhouseString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Anchor House</h1></center>' +
+                   '<center><p class="popup-text">A shelter for at-risk youth in Trenton, NJ.</p></center>' +   
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
                    '</div>';
         
-    var empireStatePopUp = L.popup({minWidth: 300}).setContent(empireStateString);
-    var hqPopUp = L.popup({minWidth: 300}).setContent(hqString);
 
-    empireState.bindPopup(empireStatePopUp);
-    hq.bindPopup(hqPopUp);
+        var crownofindiaString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Crown of India</h1></center>' +
+                   '<center><p class="popup-text">A popular Indian restaurant in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+        
+
+        var kathmanduString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Kathmandu</h1></center>' +
+                   '<center><p class="popup-text">The capital city of Nepal.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var plainsbororescuesquadString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Plainsboro Rescue Squad</h1></center>' +
+                   '<center><p class="popup-text">An emergency medical service provider in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var highschoolsouthString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">High School South</h1></center>' +
+                   '<center><p class="popup-text">A public high school in West Windsor, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var plainsbororecreationcenterString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Plainsboro Recreation Center</h1></center>' +
+                   '<center><p class="popup-text">A community center offering various recreational activities in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var cherrytreeclubString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Cherry Tree Club</h1></center>' +
+                   '<center><p class="popup-text">A recreational and social club for adults with disabilities in Princeton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var highschoolnorthString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">High School North</h1></center>' +
+                   '<center><p class="popup-text">A public high school in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var elijahspromisesoupkitchenString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Elijahs Promise Soup Kitchen</h1></center>' +
+                   '<center><p class="popup-text">A soup kitchen providing meals to those in need in New Brunswick, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var trentonareasoupkitchenString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Trenton Area Soup Kitchen</h1></center>' +
+                   '<center><p class="popup-text">A soup kitchen providing meals to those in need in Trenton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var redberryfrozenyogurtString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Redberry Frozen Yogurt</h1></center>' +
+                   '<center><p class="popup-text">A popular frozen yogurt shop in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var texasroadhouseString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Texas Roadhouse</h1></center>' +
+                   '<center><p class="popup-text">A popular steakhouse chain with locations throughout the US.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var plainsborohealthandfitnesscenterString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Plainsboro Health and Fitness Center</h1></center>' +
+                   '<center><p class="popup-text">A fitness center offering various classes and facilities in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var ronaldmcdonaldhouseString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Ronald McDonald House</h1></center>' +
+                   '<center><p class="popup-text">A charity that provides accommodations for families with sick children receiving treatment at nearby hospitals.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var buffalowildwingsString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Buffalo Wild Wings</h1></center>' +
+                   '<center><p class="popup-text">A popular chain of sports bars with locations throughout the US.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var rescuemissionoftrentonString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Rescue Mission of Trenton</h1></center>' +
+                   '<center><p class="popup-text">A homeless shelter and rehabilitation center in Trenton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var plainsboropreserveString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Plainsboro Preserve</h1></center>' +
+                   '<center><p class="popup-text">A nature preserve offering hiking trails and environmental education in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var salvationarmyString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Salvation Army</h1></center>' +
+                   '<center><p class="popup-text">A Christian charity organization with locations throughout the world.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var arminarmgardenString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Arm in Arm Garden</h1></center>' +
+                   '<center><p class="popup-text">A community garden in Princeton, NJ that grows produce for local food banks.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var artisseniorlivingString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Artis Senior Living</h1></center>' +
+                   '<center><p class="popup-text">An assisted living community in Princeton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var mercercountyparkString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Mercer County Park</h1></center>' +
+                   '<center><p class="popup-text">A large county park in West Windsor, NJ with various recreational activities.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var njeyeglassrecyclingcenterString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">NJ Eyeglass Recycling Center</h1></center>' +
+                   '<center><p class="popup-text">A non-profit organization that collects and recycles used eyeglasses.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var parlin,njString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Parlin, NJ</h1></center>' +
+                   '<center><p class="popup-text">A small town located in central New Jersey.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var washington,dcString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Washington, DC</h1></center>' +
+                   '<center><p class="popup-text">The capital city of the United States.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var eastwindsorchipotleString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">East Windsor Chipotle</h1></center>' +
+                   '<center><p class="popup-text">A fast-casual Mexican restaurant in East Windsor, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var stpetersuniversityhospitalString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">St. Peters University Hospital</h1></center>' +
+                   '<center><p class="popup-text">A hospital located in New Brunswick, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var westwindsorpoliceString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">West Windsor Police</h1></center>' +
+                   '<center><p class="popup-text">The police department for the township of West Windsor, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var thurgoodmarshallcollegefundString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Thurgood Marshall College Fund</h1></center>' +
+                   '<center><p class="popup-text">A non-profit organization that provides scholarships and support to students attending historically black colleges and universities.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var robbinselementaryschoolString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Robbins Elementary School</h1></center>' +
+                   '<center><p class="popup-text">A public elementary school in Trenton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var lawrencecommunitycenterString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Lawrence Community Center</h1></center>' +
+                   '<center><p class="popup-text">A community center offering various programs and events in Lawrence, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var easternserviceworkersassociationString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Eastern Service Workers Association</h1></center>' +
+                   '<center><p class="popup-text">A non-profit organization that advocates for the rights of low-wage workers in New Jersey.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var loavesandfishesString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Loaves and Fishes</h1></center>' +
+                   '<center><p class="popup-text">A non-profit organization that provides meals and support services to those in need in New Brunswick, NJ.</p></center>' + 
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var indianredcrosssocietykarnatakastatebranchString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Indian Red Cross Society Karnataka State Branch</h1></center>' +
+                   '<center><p class="popup-text">The branch of the Indian Red Cross Society located in the state of Karnataka, India.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var georgeewilsonelementaryschoolString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">George E. Wilson Elementary School</h1></center>' +
+                   '<center><p class="popup-text">A public elementary school in Hamilton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var greenwoodelementaryschoolString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Greenwood Elementary School</h1></center>' +
+                   '<center><p class="popup-text">A public elementary school in Hamilton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var howardshealthychoicesString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Howards Healthy Choices</h1></center>' +
+                   '<center><p class="popup-text">A health food store in Plainsboro, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var liquidchurchofmercercountyString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Liquid Church of Mercer County</h1></center>' +
+                   '<center><p class="popup-text">A Christian church located in Hamilton, NJ.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var unhqinnycString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">UN HQ in NYC</h1></center>' +
+                   '<center><p class="popup-text">The headquarters of the United Nations located in New York City.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var soles4soulsString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Soles 4 Souls</h1></center>' +
+                   '<center><p class="popup-text">A non-profit organization that provides shoes to those in need around the world.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var thewatershedinstituteincranburyString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">The Watershed Institute in Cranbury</h1></center>' +
+                   '<center><p class="popup-text">A non-profit organization that focuses on protecting and restoring clean water and the environment in New Jersey.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var libertystateparkString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Liberty State Park</h1></center>' +
+                   '<center><p class="popup-text">A large park in Jersey City, NJ with views of the Manhattan skyline.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var thegambiaString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">The Gambia</h1></center>' +
+                   '<center><p class="popup-text">A West African country known for its diverse ecosystems and wildlife.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var atlanticcityString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Atlantic City</h1></center>' +
+                   '<center><p class="popup-text">A resort city on the coast of New Jersey known for its casinos and boardwalk.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var westwindsorcommunityparkString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">West Windsor Community Park</h1></center>' +
+                   '<center><p class="popup-text">A park in West Windsor, NJ with sports fields, playgrounds, and walking trails.</p></center>' +
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+
+        var marinecorpsbaseinwesttrentonString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">Marine Corps Base in West Trenton</h1></center>' +
+                   '<center><p class="popup-text">A military base located in Trenton, NJ that serves as the headquarters for the Marine Corps Reserve.</p></center>' +      
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
+var anchorhousePopUp = L.popup({minWidth: 300}).setContent(anchorhouseString);
+var crownofindiaPopUp = L.popup({minWidth: 300}).setContent(crownofindiaString);
+var kathmanduPopUp = L.popup({minWidth: 300}).setContent(kathmanduString);
+var plainsbororescuesquadPopUp = L.popup({minWidth: 300}).setContent(plainsbororescuesquadString);
+var highschoolsouthPopUp = L.popup({minWidth: 300}).setContent(highschoolsouthString);
+var plainsbororecreationcenterPopUp = L.popup({minWidth: 300}).setContent(plainsbororecreationcenterString);
+var cherrytreeclubPopUp = L.popup({minWidth: 300}).setContent(cherrytreeclubString);
+var highschoolnorthPopUp = L.popup({minWidth: 300}).setContent(highschoolnorthString);
+var elijahspromisesoupkitchenPopUp = L.popup({minWidth: 300}).setContent(elijahspromisesoupkitchenString);
+var trentonareasoupkitchenPopUp = L.popup({minWidth: 300}).setContent(trentonareasoupkitchenString);
+var redberryfrozenyogurtPopUp = L.popup({minWidth: 300}).setContent(redberryfrozenyogurtString);
+var texasroadhousePopUp = L.popup({minWidth: 300}).setContent(texasroadhouseString);
+var plainsborohealthandfitnesscenterPopUp = L.popup({minWidth: 300}).setContent(plainsborohealthandfitnesscenterString);
+var ronaldmcdonaldhousePopUp = L.popup({minWidth: 300}).setContent(ronaldmcdonaldhouseString);
+var buffalowildwingsPopUp = L.popup({minWidth: 300}).setContent(buffalowildwingsString);
+var rescuemissionoftrentonPopUp = L.popup({minWidth: 300}).setContent(rescuemissionoftrentonString);
+var plainsboropreservePopUp = L.popup({minWidth: 300}).setContent(plainsboropreserveString);
+var salvationarmyPopUp = L.popup({minWidth: 300}).setContent(salvationarmyString);
+var arminarmgardenPopUp = L.popup({minWidth: 300}).setContent(arminarmgardenString);
+var artisseniorlivingPopUp = L.popup({minWidth: 300}).setContent(artisseniorlivingString);
+var mercercountyparkPopUp = L.popup({minWidth: 300}).setContent(mercercountyparkString);
+var njeyeglassrecyclingcenterPopUp = L.popup({minWidth: 300}).setContent(njeyeglassrecyclingcenterString);
+var parlin,njPopUp = L.popup({minWidth: 300}).setContent(parlin,njString);
+var washington,dcPopUp = L.popup({minWidth: 300}).setContent(washington,dcString);
+var eastwindsorchipotlePopUp = L.popup({minWidth: 300}).setContent(eastwindsorchipotleString);
+var stpetersuniversityhospitalPopUp = L.popup({minWidth: 300}).setContent(stpetersuniversityhospitalString);
+var westwindsorpolicePopUp = L.popup({minWidth: 300}).setContent(westwindsorpoliceString);
+var thurgoodmarshallcollegefundPopUp = L.popup({minWidth: 300}).setContent(thurgoodmarshallcollegefundString);
+var robbinselementaryschoolPopUp = L.popup({minWidth: 300}).setContent(robbinselementaryschoolString);
+var lawrencecommunitycenterPopUp = L.popup({minWidth: 300}).setContent(lawrencecommunitycenterString);
+var easternserviceworkersassociationPopUp = L.popup({minWidth: 300}).setContent(easternserviceworkersassociationString);
+var loavesandfishesPopUp = L.popup({minWidth: 300}).setContent(loavesandfishesString);
+var indianredcrosssocietykarnatakastatebranchPopUp = L.popup({minWidth: 300}).setContent(indianredcrosssocietykarnatakastatebranchString);
+var georgeewilsonelementaryschoolPopUp = L.popup({minWidth: 300}).setContent(georgeewilsonelementaryschoolString);
+var greenwoodelementaryschoolPopUp = L.popup({minWidth: 300}).setContent(greenwoodelementaryschoolString);
+var howardshealthychoicesPopUp = L.popup({minWidth: 300}).setContent(howardshealthychoicesString);
+var liquidchurchofmercercountyPopUp = L.popup({minWidth: 300}).setContent(liquidchurchofmercercountyString);
+var unhqinnycPopUp = L.popup({minWidth: 300}).setContent(unhqinnycString);
+var soles4soulsPopUp = L.popup({minWidth: 300}).setContent(soles4soulsString);
+var thewatershedinstituteincranburyPopUp = L.popup({minWidth: 300}).setContent(thewatershedinstituteincranburyString);
+var libertystateparkPopUp = L.popup({minWidth: 300}).setContent(libertystateparkString);
+var thegambiaPopUp = L.popup({minWidth: 300}).setContent(thegambiaString);
+var atlanticcityPopUp = L.popup({minWidth: 300}).setContent(atlanticcityString);
+var westwindsorcommunityparkPopUp = L.popup({minWidth: 300}).setContent(westwindsorcommunityparkString);
+var marinecorpsbaseinwesttrentonPopUp = L.popup({minWidth: 300}).setContent(marinecorpsbaseinwesttrentonString);
+
+    anchorhouse.bindPopup(anchorhousePopUp);
+crownofindia.bindPopup(crownofindiaPopUp);
+kathmandu.bindPopup(kathmanduPopUp);
+plainsbororescuesquad.bindPopup(plainsbororescuesquadPopUp);
+highschoolsouth.bindPopup(highschoolsouthPopUp);
+plainsbororecreationcenter.bindPopup(plainsbororecreationcenterPopUp);
+cherrytreeclub.bindPopup(cherrytreeclubPopUp);
+highschoolnorth.bindPopup(highschoolnorthPopUp);
+elijahspromisesoupkitchen.bindPopup(elijahspromisesoupkitchenPopUp);
+trentonareasoupkitchen.bindPopup(trentonareasoupkitchenPopUp);
+redberryfrozenyogurt.bindPopup(redberryfrozenyogurtPopUp);
+texasroadhouse.bindPopup(texasroadhousePopUp);
+plainsborohealthandfitnesscenter.bindPopup(plainsborohealthandfitnesscenterPopUp);
+ronaldmcdonaldhouse.bindPopup(ronaldmcdonaldhousePopUp);
+buffalowildwings.bindPopup(buffalowildwingsPopUp);
+rescuemissionoftrenton.bindPopup(rescuemissionoftrentonPopUp);
+plainsboropreserve.bindPopup(plainsboropreservePopUp);
+salvationarmy.bindPopup(salvationarmyPopUp);
+arminarmgarden.bindPopup(arminarmgardenPopUp);
+artisseniorliving.bindPopup(artisseniorlivingPopUp);
+mercercountypark.bindPopup(mercercountyparkPopUp);
+njeyeglassrecyclingcenter.bindPopup(njeyeglassrecyclingcenterPopUp);
+parlin,nj.bindPopup(parlin,njPopUp);
+washington,dc.bindPopup(washington,dcPopUp);
+eastwindsorchipotle.bindPopup(eastwindsorchipotlePopUp);
+stpetersuniversityhospital.bindPopup(stpetersuniversityhospitalPopUp);
+westwindsorpolice.bindPopup(westwindsorpolicePopUp);
+thurgoodmarshallcollegefund.bindPopup(thurgoodmarshallcollegefundPopUp);
+robbinselementaryschool.bindPopup(robbinselementaryschoolPopUp);
+lawrencecommunitycenter.bindPopup(lawrencecommunitycenterPopUp);
+easternserviceworkersassociation.bindPopup(easternserviceworkersassociationPopUp);
+loavesandfishes.bindPopup(loavesandfishesPopUp);
+indianredcrosssocietykarnatakastatebranch.bindPopup(indianredcrosssocietykarnatakastatebranchPopUp);
+georgeewilsonelementaryschool.bindPopup(georgeewilsonelementaryschoolPopUp);
+greenwoodelementaryschool.bindPopup(greenwoodelementaryschoolPopUp);
+howardshealthychoices.bindPopup(howardshealthychoicesPopUp);
+liquidchurchofmercercounty.bindPopup(liquidchurchofmercercountyPopUp);
+unhqinnyc.bindPopup(unhqinnycPopUp);
+soles4souls.bindPopup(soles4soulsPopUp);
+thewatershedinstituteincranbury.bindPopup(thewatershedinstituteincranburyPopUp);
+libertystatepark.bindPopup(libertystateparkPopUp);
+thegambia.bindPopup(thegambiaPopUp);
+atlanticcity.bindPopup(atlanticcityPopUp);
+westwindsorcommunitypark.bindPopup(westwindsorcommunityparkPopUp);
+marinecorpsbaseinwesttrenton.bindPopup(marinecorpsbaseinwesttrentonPopUp);
 
     var canvas = document.querySelector("canvas");
 
