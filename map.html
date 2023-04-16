@@ -80,6 +80,7 @@
     var atlanticcity = L.marker([39.3651, -74.4249]).addTo(map);
     var westwindsorcommunitypark = L.marker([40.3055, -74.6082]).addTo(map);
     var marinecorpsbaseinwesttrenton = L.marker([40.2752, -74.8036]).addTo(map);
+    var homefront = L.marker([40.2480, -74.7441]).addTo(map);
         
                    var anchorhouseString = '<div class="popup">' +
                    '<center><h1 class="popup-header">Anchor House</h1></center>' +
@@ -395,6 +396,15 @@
                    '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
                    '</div>';
 
+        var homefrontString = '<div class="popup">' +
+                   '<center><h1 class="popup-header">HomeFront</h1></center>' +
+                   '<center><p class="popup-text">An organization dedicated to helping the underpriveleged and homeless.</p></center>' + 
+                   '<center><p class="popup-text"> - Participated in HomeFront Picnic</p></center>' +
+                   '<center><p class="popup-text"> - Participated in Turkey Drive</p></center>' + 
+                   '<center><p class="popup-text"> - Participated in Canned Food Drive for 3 years</p></center>' +       
+                   '<a href="http://stepforabetterworld.org/events.html" class="popup-link">Learn more</a>' +
+                   '</div>';
+
 var anchorhousePopUp = L.popup({minWidth: 300}).setContent(anchorhouseString);
 var crownofindiaPopUp = L.popup({minWidth: 300}).setContent(crownofindiaString);
 var kathmanduPopUp = L.popup({minWidth: 300}).setContent(kathmanduString);
@@ -440,6 +450,8 @@ var thegambiaPopUp = L.popup({minWidth: 300}).setContent(thegambiaString);
 var atlanticcityPopUp = L.popup({minWidth: 300}).setContent(atlanticcityString);
 var westwindsorcommunityparkPopUp = L.popup({minWidth: 300}).setContent(westwindsorcommunityparkString);
 var marinecorpsbaseinwesttrentonPopUp = L.popup({minWidth: 300}).setContent(marinecorpsbaseinwesttrentonString);
+var homefrontPopUp = L.popup({minWidth: 300}).setContent(homefrontString);
+
 
     anchorhouse.bindPopup(anchorhousePopUp);
 crownofindia.bindPopup(crownofindiaPopUp);
@@ -486,6 +498,7 @@ thegambia.bindPopup(thegambiaPopUp);
 atlanticcity.bindPopup(atlanticcityPopUp);
 westwindsorcommunitypark.bindPopup(westwindsorcommunityparkPopUp);
 marinecorpsbaseinwesttrenton.bindPopup(marinecorpsbaseinwesttrentonPopUp);
+homefront.bindPopup(homefrontPopUp);
 
     var canvas = document.querySelector("canvas");
 
