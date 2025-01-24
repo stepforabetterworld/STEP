@@ -10,6 +10,26 @@
       gtag('js', new Date());
 
       gtag('config', 'UA-176703343-1');
+            document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.querySelector(".sponsor-carousel");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+
+    prevBtn.addEventListener("click", () => {
+        carousel.scrollBy({
+            left: -300,
+            behavior: "smooth",
+        });
+    });
+
+    nextBtn.addEventListener("click", () => {
+        carousel.scrollBy({
+            left: 300,
+            behavior: "smooth",
+        });
+    });
+});
+
     </script>
     <title>STEP For a Better World | Home</title>
     <meta charset="utf-8">
@@ -175,7 +195,49 @@
                                         text-decoration: none;
                                         cursor: pointer;
                                     }
+                                        .sponsor-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.sponsor-item {
+    flex: 0 0 300px;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.sponsor-item img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.carousel-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.carousel-controls .prev-btn,
+.carousel-controls .next-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.carousel-controls .prev-btn:hover,
+.carousel-controls .next-btn:hover {
+    background: #0056b3;
+}
+
                                 </style>
+                                
                             </head>
                             <body>
                             
@@ -406,102 +468,54 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
             </div>
         </div>
     </section>
-    <section class="ftco-section-parallax" id="sponsors">
-        <div class="parallax-img d-flex align-items-center">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-7 heading-section heading-section-white ftco-animate">
-                        <!-- <img src="img/partners.png" alt="partners" /> -->
-                        <h2 class="text-center">Our Sponsors:</h2>
-                        <div class="col-xl-13">
-                            <div class="card sponsors mb-4 px-4 pt-4 pb-md-4">
-                                <div class="card-block">
-                                    <div class="row mb-md-4">
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/coi.png" alt="Crown of India"></a></h3>
-                                            <center><span>Crown of India</span></center>
-                                        </div>
-                                            <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/target.png" alt=""></a></h3>
-                                            <center><span>Target</span></center>
-                                        </div>
-                                            <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/pnc.png" alt="Kids In Need Foundation"></a></h3>
-                                            <center><span>PNC</span></center>
-                                        </div>
-                                            <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/Dollartree.jpeg" alt="Kids In Need Foundation"></a></h3>
-                                            <center><span>DollarTree</span></center>
-                                        </div>
-                                             <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/costco.svg" alt="Kids In Need Foundation"></a></h3>
-                                            <center><span>Costco</span></center>
-                                        </div>
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/al.png" alt="Aljons"></a>
-                                            <center><span>Aljons</span></center>
-                                        </div>
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/bsg.png" alt="Bagel Street Grill"></a>
-                                            <center><span>Bagel Street Grill</span></center>
-                                        </div>
-                                    </div>
-                                        <div class="row mb-md-4">
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/lci.png" alt="Sayreville Lions Club"></a></h3>
-                                            <center><span>Sayreville Lions Club</span></center>
-                                        </div>
-                                            <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/lci.png" alt="Summit Lions Club"></a></h3>
-                                            <center><span>Summit Lions Club</span></center>
-                                        </div>
-                                            <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/zappos.jpeg" alt="Zappos"></a></h3>
-                                            <center><span>Zappos</span></center>
-                                        </div>
-                                           
-
-                                    </div>
-                                    <div class="row mb-md-4">
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/trh.png" alt="Texas Roadhouse"></a>
-                                            <center><span>Texas Roadhouse</span></center>
-                                        </div>
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/pfw.png" alt="Princeton Fitness and Wellness Center"></a>
-                                            <center><span>Princeton Fitness and Wellness Center</span></center>
-                                        </div>
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/ge.png" alt="Golden Empire"></a>
-                                            <center><span>Golden Empire</span></center>
-                                        </div>
-                                    </div>
-                                    <div class="row mb-md-4">
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/rm.png" alt="Radio Mirchi"></a>
-                                            <center><span>Radio Mirchi</span></center>
-                                        </div>
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/kin.png" alt="Kids In Need Foundation"></a></h3>
-                                            <center><span>Kids In Need Foundation</span></center>
-                                        </div>
-                                        
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/Walmart-Logo-PNG-Transparent.png" alt="Kids In Need Foundation"></a></h3>
-                                            <center><span>Walmart</span></center>
-                                        </div>
-                                        <div class="col-md-4 mb-4 my-md-auto">
-                                            <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/sponsors/media-Wegmans-Logo-Icon-p.png" alt="Kids In Need Foundation"></a></h3>
-                                            <center><span>Wegmans</span></center>
-                                        </div>
-                                    </div>
-                            </div>
+        <section class="ftco-section-parallax" id="sponsors">
+    <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-7 heading-section heading-section-white ftco-animate">
+                    <h2 class="text-center">Our Sponsors</h2>
+                    <div class="sponsor-carousel">
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/coi.png" alt="Crown of India">
+                            <h5>Crown of India</h5>
                         </div>
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/target.png" alt="Target">
+                            <h5>Target</h5>
+                        </div>
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/pnc.png" alt="PNC">
+                            <h5>PNC</h5>
+                        </div>
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/Dollartree.jpeg" alt="DollarTree">
+                            <h5>DollarTree</h5>
+                        </div>
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/costco.svg" alt="Costco">
+                            <h5>Costco</h5>
+                        </div>
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/al.png" alt="Aljons">
+                            <h5>Aljons</h5>
+                        </div>
+                        <div class="sponsor-item">
+                            <img class="img-fluid" src="img/sponsors/bsg.png" alt="Bagel Street Grill">
+                            <h5>Bagel Street Grill</h5>
+                        </div>
+                        <!-- Add more sponsors here -->
+                    </div>
+                    <!-- Carousel Navigation -->
+                    <div class="carousel-controls">
+                        <button class="prev-btn">&lt;</button>
+                        <button class="next-btn">&gt;</button>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
     <section class="ftco-section ftco-counter" id="events">
         <div class="container">
             <div class="row justify-content-center mb-5 pb-5">
