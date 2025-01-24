@@ -11,24 +11,7 @@
 
       gtag('config', 'UA-176703343-1');
             document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.querySelector(".sponsor-carousel");
-    const prevBtn = document.querySelector(".prev-btn");
-    const nextBtn = document.querySelector(".next-btn");
-
-    prevBtn.addEventListener("click", () => {
-        carousel.scrollBy({
-            left: -300,
-            behavior: "smooth",
-        });
-    });
-
-    nextBtn.addEventListener("click", () => {
-        carousel.scrollBy({
-            left: 300,
-            behavior: "smooth",
-        });
-    });
-});
+    
 
     </script>
     <title>STEP For a Better World | Home</title>
@@ -214,27 +197,7 @@
     margin-bottom: 10px;
 }
 
-.carousel-controls {
-    text-align: center;
-    margin-top: 20px;
-}
 
-.carousel-controls .prev-btn,
-.carousel-controls .next-btn {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.carousel-controls .prev-btn:hover,
-.carousel-controls .next-btn:hover {
-    background: #0056b3;
-}
 
                                 </style>
                                 
@@ -376,94 +339,199 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
             </div>
         </div>
     </section>
-    <section class="ftco-section-parallax" id="partners">
-        <div class="parallax-img d-flex align-items-center">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-md-7 heading-section heading-section-white ftco-animate">
-                        <h2 class="text-center">Our Partners:</h2>
-                        <div class="container">
-                            <div class="row justify-content-center mb-5 pb-5">
-                                <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+    
+        <section class="ftco-section testimony-section bg-light" id="mentors">
+        <div class="container">
+            <div class="row justify-content-center mb-5 pb-5">
+                <div class="col-md-7 text-center heading-section ftco-animate">
+                    <h1 class="mb-4">Our Partners</h1>
+                </div>
+            </div>
+            <div class="row ftco-animate">
+                <div class="col-md-12 grab">
+                    <div class="carousel-testimony owl-carousel ftco-owl">
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/coi.png)"></div>
+                                <div class="text">
+                                    <p class="name">Lions Club International</p>
+                                    
                                 </div>
-                            </div>
-                            <div id="eventcontent">
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="testimony-wrap p-4 pb-5 block-18 text-center">
-                                            <div class="text">
-                                                <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/partners/lc.png" alt="ECDC"></a></h3>
-                                                <span style="color: rgba(0, 0, 0, 0.7);">Lions Club International</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="testimony-wrap p-4 pb-5 block-18 text-center">
-                                            <div class="text">
-                                                <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/partners/un.png" ></a></h3>
-                                                <span style="color: rgba(0, 0, 0, 0.7);">United Nations</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="testimony-wrap p-4 pb-5 block-18 text-center">
-                                            <div class="text">
-                                                <br><br><br><br>
-                                                <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/partners/bks.png" alt="Hermann Transportation Services"></a></h3>
-                                                <br><br><br><br><br>
-                                                <span style="color: rgba(0, 0, 0, 0.7);">BookSmiles</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="testimony-wrap p-4 pb-5 block-18 text-center">
-                                            <div class="text">
-                                                <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/partners/homefront.png" alt="HomeFront"></a></h3>
-                                                <span style="color: rgba(0, 0, 0, 0.7);">HomeFront</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="testimony-wrap p-4 pb-5 block-18 text-center">
-                                            <div class="text">
-                                                <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/partners/rah.png" ></a></h3>
-                                                <span style="color: rgba(0, 0, 0, 0.7);">Rise Against Hunger</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="testimony-wrap p-4 pb-5 block-18 text-center">
-                                            <div class="text">
-                                                <h3><a rel="noopener noreferrer" target="_blank" href=""><img class="img-fluid" src="img/partners/hhc.png"></a></h3>
-                                                <span style="color: rgba(0, 0, 0, 0.7);">Howard’s Healthy Choices</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="spacer"></div>
-                                <div class="row">
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="block-18 text-center">
-                                            <div class="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                
-                                    <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
-                                        <div class="block-18 text-center">
-                                            <div class="text">
-                                                <a class="center btn btn-primary btn-outline-white px-5 py-2-5" data-mode="popup"
-                                                    href="partners.html" target="_blank">See all Partners</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>    
                             </div>
                         </div>
-                    </div>            
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/cotsco.png)"></div>
+                                <div class="text">
+                                    <p class="name">United Nations</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/sponsors/Walmart-Logo-PNG-Transparent.png)"></div>
+                                <div class="text">
+                                    <p class="name">BookSmiles</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/Dollartree.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Rise Against Hunger</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/target.png)"></div>
+                                <div class="text">
+                                    <p class="name">Homefront</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/zappos.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Howard's Healthy Choices</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/bsg.png)"></div>
+                                <div class="text">
+                                    <p class="name">Early Childhood Development Center</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                             <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/lci.png)"></div>
+                                <div class="text">
+                                    <p class="name">Plainsboro Rescue Squad</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                             <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/al.png)"></div>
+                                <div class="text">
+                                    <p class="name">High School South</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                             <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/lci.png)"></div>
+                                <div class="text">
+                                    <p class="name">Plainsboro Founder's Day</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/trh.png)"></div>
+                                <div class="text">
+                                    <p class="name">Cherry Tree Club</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/ge.png)"></div>
+                                <div class="text">
+                                    <p class="name">Make A Wish Foundation</p>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                             <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/rm.png)"></div>
+                                <div class="text">
+                                    <p class="name">Plainsboro Food Pantry</p>
+                                </div>
+                            </div>
+                        </div>
+                             <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/kin.png)"></div>
+                                <div class="text">
+                                    <p class="name">Elijah's Promise Soup Kitchen</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/media-Wegmans-Logo-Icon-p.png)"></div>
+                                <div class="text">
+                                    <p class="name">Trenton Area Soup Kitchen</p>
+                                </div>
+                            </div>
+                        </div>
+                             <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pfw.png)"></div>
+                                <div class="text">
+                                    <p class="name">George School</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pfw.png)"></div>
+                                <div class="text">
+                                    <p class="name">RWJ Hamilton Health & Fitness</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pfw.png)"></div>
+                                <div class="text">
+                                    <p class="name">Ronald McDonald House Charities</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pfw.png)"></div>
+                                <div class="text">
+                                    <p class="name">Rescue Mission of Trenton</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pfw.png)"></div>
+                                <div class="text">
+                                    <p class="name">Anchor House</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pnc.png)"></div>
+                                <div class="text">
+                                    <p class="name">Learning Experience</p>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
