@@ -160,12 +160,9 @@ a:active {
 }
 
 nav {
-    background:none;
-    position:absolute;
-    top:10px;
-   width:100;
-   padding: 0 20px;
-
+    position: absolute;
+    top: 10px;
+    width: 100%;
 }
 
 nav a {
@@ -173,17 +170,21 @@ nav a {
     text-decoration: none;
     font-size: 18px;
     padding: 10px 15px;
+    background-color: #333;
+    border-radius: 5px;
 }
 
 nav a:hover {
     background-color: #555;
-    border-radius: 5px;
 }
-nav .left{
-position:absolute;
-left:20px;
+
+nav .left {
+    position: absolute;
+    left: 20px;
 }
-nav .right{
-position:absolute;
-right:20px;
+
+/* Position "Home" button on top right */
+nav .right {
+    position: absolute;
+    right: 20px;
 }
