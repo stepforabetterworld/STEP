@@ -32,6 +32,22 @@
     <link href="css/icomoon.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/additional.css" rel="stylesheet">
+    <style>
+@keyframes backgroundTransition {
+    0%, 45% {
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/spash1.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    55%, 95% {
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/lci2.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    100% {
+        background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/spash1.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}
+</style>
     <!-- meta -->
     <link href="img/favicon.png" rel="apple-touch-icon" sizes="180x180">
     <link href="img/favicon.png" rel="icon" sizes="16x16" type="image/png">
@@ -108,10 +124,20 @@
     </nav>
     <section id="home">
         <div class="hero-wrap js">
-            <div class="overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/spash1.jpg') no-repeat center center fixed;   -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;"></div>
+//             <!--div class="overlay" style="background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('img/spash1.jpg') no-repeat center center fixed;   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;"></div-->
+<div class="overlay" style="
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    animation: backgroundTransition 12s infinite;
+"></div>
             <div id="particles-js"></div>
             <div class="container">
                 <div class="row no-gutters slider-text align-items-center justify-content-center"
@@ -352,16 +378,16 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="testimony-wrap p-4 pb-5 block-18 text-center">
                             <div class="text">
-                                <h3><a href="years/2023/mpe23/mpe23.html">150,000 Meal Packaging Event </a></h3>
-                                <span style="color: rgba(0, 0, 0, 0.7);">​In under 7 hours we  packed 150,000 meals in partnership with Liquid Church in Mercer County for Rise Against Hunger!</span>
+                                <h3><a href="years/2023/mpe23/mpe23.html">Meal Packaging Event </a></h3>
+                                <span style="color: rgba(0, 0, 0, 0.7);">​In under 7 hours, on blank date we packed 150,624 meals in partnership with OneProject and U.S. Hunger for Food Pantries across Mercer County!</span>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex justify-content-center counter-wrap ftco-animate">
                         <div class="testimony-wrap p-4 pb-5 block-18 text-center">
                             <div class="text">
-                                <h3><a href="years/2022/lec22/lec22.html">Guinness World Record of Longest Chain of Eyeglasses</a></h3>
-                                <span style="color: rgba(0, 0, 0, 0.7);">On May 1, 2022, STEP assisted in Breaking the Guinness World Record utilizing 100,000 pairs of eyeglasses to create the longest chain of eyeglasses 13,030 m ( 42,749 ft and 4.13 inches) .</span>
+                                <h3><a href="years/2022/lec22/lec22.html">Guinness World Record of Longest Chain of Spectacles </a></h3>
+                                <span style="color: rgba(0, 0, 0, 0.7);">On May 1, 2022, STEP assisted in Breaking the Guinness World Record utilizing 100,000 pairs of Spectacles to create the longest chain of Spectacles 13,030 m ( 42,749 ft and 4.13 inches) .</span>
                             </div>
                         </div>
                     </div>
@@ -380,7 +406,7 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                         <div class="testimony-wrap p-4 pb-5 block-18 text-center">
                             <div class="text">
                                 <h3><a href="years/2022/toyd22/toyd22.html">Toy Drive</a></h3>
-                                <span style="color: rgba(0, 0, 0, 0.7);">In 2022, STEP worked with Toys for Tots to collect 1,183 toys for children!</span>
+                                <span style="color: rgba(0, 0, 0, 0.7);">In 2022, STEP worked with Toys for Tots to collect 1,183 toys for children in affiliation with the U.S. Marines Corps Reserve!</span>
                             </div>
                         </div>
                     </div>
@@ -459,6 +485,44 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                         </div>  
                         <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/chipotle.png)"></div>
+                                <div class="text">
+                                    <p class="name">Chipotle</p>
+
+                                </div>
+                            </div>
+                        </div>  
+
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/CHH.png)"></div>
+                                <div class="text">
+                                    <p class="name">Covenant House</p>
+
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/PIMS.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Princeton International school of Mathematics</p>
+
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/partners/)"></div>
+                                <div class="text">
+                                    <p class="name">Care4medicalequipment</p>
+
+                                </div>
+                            </div>
+                        </div> 
+                        
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
                                 <div class="user-img mb-4" style="background-image: url(img/partners/BEEKIND.jpeg)"></div>
                                 <div class="text">
                                     <p class="name">Be Kind</p>
@@ -495,7 +559,7 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                         </div> 
                         <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-4" style="background-image: url(img/partners/THA.png)"></div>
+                                <div class="user-img mb-4" style="background-image: url(img/partners/THA.jpeg)"></div>
                                 <div class="text">
                                     <p class="name">Trenton Housing Authority</p>
 
@@ -612,7 +676,7 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                         </div>
                              <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-4" style="background-image: url(img/partners/pfd.png)"></div>
+                                <div class="user-img mb-4" style="background-image: url(img/partners/pfd.jpeg)"></div>
                                 <div class="text">
                                     <p class="name">Plainsboro Food Pantry</p>
                                 </div>
@@ -926,7 +990,7 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                                 <div class="user-img mb-4" style="background-image: url(img/members/avighna.jpeg)"></div>
                                 <div class="text">
                                     <p class="name">Avighna Shree Tirumala</p>
-                                    <span class="position" style="color:#AA6C39;">Advisor's Assistant</span>
+                                    <span class="position" style="color:#AA6C39;">Advisor's Assistant,YouTube moderator</span>
                                 </div>
                             </div>
                         </div>
@@ -975,7 +1039,7 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="user-img mb-4" style="background-image: url(img/members/yashvi.jpeg)"></div>
                                 <div class="text">
-                                    <p class="name">Yashvi</p>
+                                    <p class="name">Yashvi Bharariya </p>
                                     <span class="position" style="color:#AA6C39;">Member</span>
                                 </div>
                             </div>
@@ -989,8 +1053,241 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                                 </div>
                             </div>
                         </div>
-                        
-                        
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Myra.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Myra Chandani</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Estelle_Chettiar.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Estelle Chettiar</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Aahan.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Aahan Sharma</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Shreya_sivaji.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Shreya Sivaji</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Aarav.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Aarav Garg</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Nidish_rekha.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Nidish Rekha</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Vidya_s.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Vidya Sumanth</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Minghai_Xiao.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Minghai Xiao</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Pragnay_Sinha.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Pragnay Sinha</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/avyay_kaushik.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Avyay Kaushik</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Advik_k.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Advik Kaushik</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                          <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Sathvika_Cheedella.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Sathvika Cheedella</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                  <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Harini_Selvan.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name"> Harini Selvan</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/shaurya_jindal.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Shaurya Jindal</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Aashrita_male.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Aashrita Male</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Sreespoorthi_Goddeti.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Sreespoorthi Goddeti</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/akshithi_sinha.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Akshithi Sinha</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/vishruth.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Vishruth Krishna Mahendiran</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/sanvi_javkar.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Sanvi Javkar</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Mehreen_Chinwala.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Mehreen Chinwala</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Aarna_Dubey.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Aarna Dubey</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Ragini_Jain.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Ragini Jain</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/Aditi_Naine.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Aditi Naine</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                         <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/mira_xiao.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Mira Xiao</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/ayush_medhekar.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Ayush Medhekar</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+                                                <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/maanya_krishnan.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Maanya Krishnan</p>
+                                    <span class="position" style="color:#AA6C39;">Member</span>
+                                </div>
+                            </div>
+                        </div>
+        
                         <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="user-img mb-4" style="background-image: url(img/members/TanmayB.jpeg)"></div>
@@ -1000,16 +1297,17 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                                 </div>
                             </div>
                         </div>
-                     
-                      <div class="item text-center">
+                        <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
-                                <div class="user-img mb-4" style="background-image: url(img/members/SohamJ.jpeg)"></div>
+                                <div class="user-img mb-4" style="background-image: url(img/members/Aditya_Kaushik.jpeg)"></div>
                                 <div class="text">
-                                    <p class="name"> Soham Javkar</p>
+                                    <p class="name">Aditya Kaushik</p>
                                     <span class="position" style="color:#AA6C39;">Member</span>
                                 </div>
                             </div>
                         </div>
+                     
+                     
                          <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
                                 <div class="user-img mb-4" style="background-image: url(img/members/AryaS.jpeg)"></div>
@@ -1705,6 +2003,15 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
                                 </div>
                             </div>
                         </div>
+                        <div class="item text-center">
+                            <div class="testimony-wrap p-4 pb-5">
+                                <div class="user-img mb-4" style="background-image: url(img/members/soummith.jpeg)"></div>
+                                <div class="text">
+                                    <p class="name">Soummith Challa</p>
+                                    <span class="position" style="color:#AA6C39;">Volunteer</span>
+                                </div>
+                            </div>
+                        </div>
                          
                         <div class="item text-center">
                             <div class="testimony-wrap p-4 pb-5">
@@ -1909,7 +2216,7 @@ We are dedicated to bridging gaps, breaking barriers, and building connections a
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <h2 class="ftco-heading-2">STEP For A Better World Leo Club</h2>
+                        <h2 class="ftco-heading-2">STEP For A Better World LEO Club</h2>
                         <p>New Jersey<br>Non Profit Organization</p>
                     </div>
                 </div>
