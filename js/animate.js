@@ -17,11 +17,11 @@ function animateCounter(elementId, targetValue, duration, suffix = '') {
 }
 
 function startAnimation() {
-    setTimeout(() => animateCounter('counter1', 668610, 2000), 200);
+    setTimeout(() => animateCounter('counter1', 789722, 2000), 200);
     setTimeout(() => animateCounter('counter2', 100000, 2500), 400);
     setTimeout(() => animateCounter('counter3', 202, 1500), 600);
-    setTimeout(() => animateCounter('counter4', 4323, 2200), 800);
-    setTimeout(() => animateCounter('counter5', 29000, 2200), 200);
+    setTimeout(() => animateCounter('counter4', 15000, 2200), 800);
+    setTimeout(() => animateCounter('counter5', 30000, 2200), 200);
 }
 
 function handleResize() {

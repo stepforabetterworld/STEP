@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calendar Events</title>
+    <style>
+        :root {
+            --primary: #4285f4;
+            --primary-light: #a1c0f7;
+            --secondary: #34a853;
+            --light-gray: #f5f5f5;
+            --dark-gray: #666;
+            --white: #fff;
+            --red: #ea4335;
+            --yellow: #fbbc05;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .month-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .month-display {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background-color: var(--primary-light);
+            color: var(--white);
+        }
+
+        .view-options {
+            display: flex;
+            gap: 10px;
+        }
+
+        .view-btn {
+            padding: 8px 15px;
+            border: 1px solid var(--primary);
+            background-color: var(--white);
+            color: var(--primary);
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .view-btn.active {
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .calendar-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .main-calendar {
+            flex: 1;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .sidebar {
+            width: 300px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .sidebar h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--primary);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        .calendar-header-cell {
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            background-color: var(--primary);
+            color: var(--white);
+        }
+
+        .calendar-day {
+            min-height: 120px;
+            border: 1px solid var(--border-color);
+            padding: 5px;
+            position: relative;
+        }
+
+        .day-number {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .calendar-day.other-month {
+            background-color: var(--light-gray);
+            opacity: 0.7;
+        }
+
+        .calendar-day.today {
+            background-color: rgba(66, 133, 244, 0.1);
+            border: 2px solid var(--primary);
+        }
+
+        .event {
+            background-color: var(--primary-light);
+            border-left: 3px solid var(--primary);
+            padding: 5px;
+            margin-bottom: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            cursor: pointer;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .event.birthday {
+            background-color: rgba(251, 188, 5, 0.2);
+            border-left: 3px solid var(--yellow);
+        }
+
+        .event.meeting {
+            background-color: rgba(234, 67, 53, 0.2);
+            border-left: 3px solid var(--red);
+        }
+
+        .event.holiday {
+            background-color: rgba(52, 168, 83, 0.2);
+            border-left: 3px solid var(--secondary);
+        }
+
+        .event-list {
+            margin-top: 20px;
+        }
+
+        .event-item {
+            padding: 10px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .event-item:last-child {
+            border-bottom: none;
+        }
+
+        .event-date {
+            font-size: 12px;
+            color: var(--dark-gray);
+        }
+
+        .event-title {
+            font-weight: 500;
+            margin: 5px 0;
+        }
+
+        .event-description {
+            font-size: 12px;
+            color: var(--dark-gray);
+        }
+
+        .category-filters {
+            margin-bottom: 20px;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .week-view, .day-view {
+            display: none;
+        }
+
+        .day-view-content {
+            padding: 20px;
+        }
+
+        .hour-row {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+            min-height: 60px;
+        }
+
+        .hour-label {
+            width: 80px;
+            font-size: 12px;
+            color: var(--dark-gray);
+            text-align: right;
+            padding-right: 10px;
+            padding-top: 5px;
+        }
+
+        .hour-events {
+            flex: 1;
+            position: relative;
+        }
+
+        .day-event {
+            position: absolute;
+            background-color: var(--primary-light);
+            border-left: 3px solid var(--primary);
+            padding: 5px;
+            border-radius: 3px;
+            font-size: 12px;
+            overflow: hidden;
+            width: 95%;
+        }
+
+        @media (max-width: 992px) {
+            .calendar-container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .calendar-grid {
+                grid-template-columns: repeat(7, 1fr);
+            }
+
+            .calendar-day {
+                min-height: 80px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .view-options {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Calendar Events</h1>
+    </header>
+
+    <div class="container">
+        <div class="calendar-header">
+            <div class="month-nav">
+                <button class="nav-btn">&#8249;</button>
+                <div class="month-display">May 2025</div>
+                <button class="nav-btn">&#8250;</button>
+            </div>
+            <div class="view-options">
+                <button class="view-btn active" id="month-view-btn">Month</button>
+                <button class="view-btn" id="week-view-btn">Week</button>
+                <button class="view-btn" id="day-view-btn">Day</button>
+            </div>
+        </div>
+
+        <div class="calendar-container">
+            <div class="main-calendar">
+                <!-- Month View -->
+                <div class="month-view">
+                    <div class="calendar-grid">
+                        <div class="calendar-header-cell">Sun</div>
+                        <div class="calendar-header-cell">Mon</div>
+                        <div class="calendar-header-cell">Tue</div>
+                        <div class="calendar-header-cell">Wed</div>
+                        <div class="calendar-header-cell">Thu</div>
+                        <div class="calendar-header-cell">Fri</div>
+                        <div class="calendar-header-cell">Sat</div>
+                        
+                        <!-- Week 1 -->
+                        <div class="calendar-day other-month">
+                            <div class="day-number">27</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">28</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">29</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">30</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">1</div>
+                            <div class="event">9:00 AM - Team Standup</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">2</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">3</div>
+                            <div class="event holiday">Mother's Day</div>
+                        </div>
+                        
+                        <!-- Week 2 -->
+                        <div class="calendar-day">
+                            <div class="day-number">4</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">5</div>
+                            <div class="event">2:00 PM - Doctor Appointment</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">6</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">7</div>
+                            <div class="event meeting">10:30 AM - Client Meeting</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">8</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">9</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">10</div>
+                            <div class="event">All Day - Weekend Project</div>
+                        </div>
+                        
+                        <!-- Week 3 -->
+                        <div class="calendar-day">
+                            <div class="day-number">11</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">12</div>
+                            <div class="event meeting">1:00 PM - Team Review</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">13</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">14</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">15</div>
+                            <div class="event">4:00 PM - Gym Session</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">16</div>
+                        </div>
+                        <div class="calendar-day today">
+                            <div class="day-number">17</div>
+                            <div class="event">9:00 AM - Coffee with Alex</div>
+                            <div class="event meeting">2:00 PM - Project Planning</div>
+                        </div>
+                        
+                        <!-- Week 4 -->
+                        <div class="calendar-day">
+                            <div class="day-number">18</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">19</div>
+                            <div class="event">11:30 AM - Lunch with Team</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">20</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">21</div>
+                            <div class="event birthday">Sarah's Birthday</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">22</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">23</div>
+                            <div class="event">3:00 PM - Coffee Break</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">24</div>
+                        </div>
+                        
+                        <!-- Week 5 -->
+                        <div class="calendar-day">
+                            <div class="day-number">25</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">26</div>
+                            <div class="event meeting">9:30 AM - Quarterly Review</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">27</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">28</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">29</div>
+                            <div class="event">5:00 PM - Happy Hour</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">30</div>
+                        </div>
+                        <div class="calendar-day">
+                            <div class="day-number">31</div>
+                            <div class="event holiday">Memorial Day Weekend</div>
+                        </div>
+                        
+                        <!-- Week 6 (June) -->
+                        <div class="calendar-day other-month">
+                            <div class="day-number">1</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">2</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">3</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">4</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">5</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">6</div>
+                        </div>
+                        <div class="calendar-day other-month">
+                            <div class="day-number">7</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Week View (Hidden by default) -->
+                <div class="week-view">
+                    <h3>Week View Content - May 11-17, 2025</h3>
+                    <p>This would show the detailed week view with hours.</p>
+                </div>
+                
+                <!-- Day View (Hidden by default) -->
+                <div class="day-view">
+                    <h3>Saturday, May 17, 2025</h3>
+                    <div class="day-view-content">
+                        <div class="hour-row">
+                            <div class="hour-label">8:00 AM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">9:00 AM</div>
+                            <div class="hour-events">
+                                <div class="day-event" style="top: 0; height: 55px;">
+                                    Coffee with Alex
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">10:00 AM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">11:00 AM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">12:00 PM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">1:00 PM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">2:00 PM</div>
+                            <div class="hour-events">
+                                <div class="day-event meeting" style="top: 0; height: 120px;">
+                                    Project Planning
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">3:00 PM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">4:00 PM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">5:00 PM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                        <div class="hour-row">
+                            <div class="hour-label">6:00 PM</div>
+                            <div class="hour-events"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar">
+                <h3>Today's Events</h3>
+                <div class="event-list">
+                    <div class="event-item">
+                        <div class="event-date">9:00 AM - 10:00 AM</div>
+                        <div class="event-title">Coffee with Alex</div>
+                        <div class="event-description">Meet at Starbucks on Main St.</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">2:00 PM - 4:00 PM</div>
+                        <div class="event-title">Project Planning</div>
+                        <div class="event-description">Quarterly project review and planning session with the development team.</div>
+                    </div>
+                </div>
+                
+                <h3>Upcoming Events</h3>
+                <div class="event-list">
+                    <div class="event-item">
+                        <div class="event-date">May 19 • 11:30 AM</div>
+                        <div class="event-title">Lunch with Team</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">May 21 • All Day</div>
+                        <div class="event-title">Sarah's Birthday</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">May 26 • 9:30 AM</div>
+                        <div class="event-title">Quarterly Review</div>
+                    </div>
+                    <div class="event-item">
+                        <div class="event-date">May 29 • 5:00 PM</div>
+                        <div class="event-title">Happy Hour</div>
+                    </div>
+                </div>
+                
+                <h3>Event Categories</h3>
+                <div class="category-filters">
+                    <div class="filter-item">
+                        <div class="color-dot" style="background-color: #4285f4;"></div>
+                        <span>Regular Events</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="color-dot" style="background-color: #ea4335;"></div>
+                        <span>Meetings</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="color-dot" style="background-color: #fbbc05;"></div>
+                        <span>Birthdays</span>
+                    </div>
+                    <div class="filter-item">
+                        <div class="color-dot" style="background-color: #34a853;"></div>
+                        <span>Holidays</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to switch between views
+        document.addEventListener('DOMContentLoaded', function() {
+            const monthViewBtn = document.getElementById('month-view-btn');
+            const weekViewBtn = document.getElementById('week-view-btn');
+            const dayViewBtn = document.getElementById('day-view-btn');
+            
+            const monthView = document.querySelector('.month-view');
+            const weekView = document.querySelector('.week-view');
+            const dayView = document.querySelector('.day-view');
+            
+            monthViewBtn.addEventListener('click', function() {
+                monthView.style.display = 'block';
+                weekView.style.display = 'none';
+                dayView.style.display = 'none';
+                
+                monthViewBtn.classList.add('active');
+                weekViewBtn.classList.remove('active');
+                dayViewBtn.classList.remove('active');
+            });
+            
+            weekViewBtn.addEventListener('click', function() {
+                monthView.style.display = 'none';
+                weekView.style.display = 'block';
+                dayView.style.display = 'none';
+                
+                monthViewBtn.classList.remove('active');
+                weekViewBtn.classList.add('active');
+                dayViewBtn.classList.remove('active');
+            });
+            
+            dayViewBtn.addEventListener('click', function() {
+                monthView.style.display = 'none';
+                weekView.style.display = 'none';
+                dayView.style.display = 'block';
+                
+                monthViewBtn.classList.remove('active');
+                weekViewBtn.classList.remove('active');
+                dayViewBtn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
